@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hapvida - 2ª Via de Fatura e Suporte de Pagamento</title>
 <meta name="description" content="Emita a segunda via da sua fatura Hapvida, pague via Pix e tire dúvidas com nosso suporte 24h. Rápido, seguro e sem burocracia.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JY657JPDC4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JY657JPDC4');
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -13,7 +21,7 @@
 body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text)}
 .reveal{opacity:0;transform:translateY(18px);animation:fadeUp .6s ease forwards}
 .reveal:nth-child(2){animation-delay:.1s}.reveal:nth-child(3){animation-delay:.2s}.reveal:nth-child(4){animation-delay:.3s}.reveal:nth-child(5){animation-delay:.4s}.reveal:nth-child(6){animation-delay:.5s}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .card-hover{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .card-hover:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(4,53,172,.14);border-color:var(--accent)}
 .faq-item{border-bottom:1px solid var(--border)}
@@ -143,23 +151,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text)}
           <div style="grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-top:-4px;"><input type="checkbox" id="termo" required style="width:16px;height:16px;accent-color:var(--accent);"><label for="termo" style="font-size:12.5px;color:var(--muted);">Declaro ser o titular ou responsável autorizado e concordo com a <a href="#" class="wa-action" style="color:var(--accent);font-weight:700;">Política de Privacidade</a>.</label></div>
           <div style="grid-column:1/-1;"><button type="submit" class="btn-primary btn-pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Buscar e Emitir 2ª Via</button></div>
         </form>
-        <div id="resultPanel" style="display:none;margin-top:24px;padding:22px;border-radius:14px;background:#f0f7ff;border:1.5px solid var(--accent);">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:36px;height:36px;border-radius:50%;background:#16a34a;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-            <div><h3 style="margin:0;font-size:16px;font-weight:800;color:var(--text);">Fatura localizada com sucesso</h3><p style="margin:2px 0 0;font-size:12.5px;color:var(--muted);">Referência: <span id="refMes">Outubro/2026</span></p></div>
-          </div>
-          <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:16px;">
-            <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border);"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Valor</div><div style="font-size:22px;font-weight:900;color:var(--accent);margin-top:4px;">R$ 487,90</div></div>
-            <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border);"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Vencimento</div><div style="font-size:22px;font-weight:900;color:var(--text);margin-top:4px;">10/11/2026</div></div>
-            <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border);"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Status</div><div style="margin-top:8px;"><span style="background:#fef3c7;color:#92400e;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:800;">Pendente</span></div></div>
-          </div>
-          <div style="margin-bottom:16px;"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Linha Digitável</div><div class="barcode">00190.50095 40144.841609 95683.110025 5 88880000048790</div></div>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;">
-            <a href="#" class="wa-action action-btn" style="flex:1;min-width:160px;padding:12px;border-radius:10px;background:var(--accent);color:#fff;font-weight:800;font-size:14px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Baixar PDF do Boleto</a>
-            <a href="#" class="wa-action action-btn" style="flex:1;min-width:160px;padding:12px;border-radius:10px;background:#fff;color:var(--accent);font-weight:800;font-size:14px;border:1.5px solid var(--accent);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>Pagar com Pix</a>
-            <button onclick="document.getElementById('resultPanel').style.display='none';document.getElementById('faturaForm').reset();" style="padding:12px 18px;border-radius:10px;background:transparent;color:var(--muted);font-weight:700;font-size:14px;border:1.5px solid var(--border);cursor:pointer;font-family:inherit;">Nova busca</button>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -195,34 +187,21 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text)}
   <!-- SUPPORT CHANNELS -->
   <section id="suporte" class="max-w-6xl mx-auto px-6 py-16">
     <div class="reveal text-center mb-10"><p style="font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin:0 0 8px;">Central de Suporte</p><h2 style="font-size:30px;font-weight:900;margin:0;color:var(--text);letter-spacing:-.02em;">Fale com a gente do seu jeito</h2><p style="font-size:15px;color:var(--muted);max-width:520px;margin:12px auto 0;">Dúvidas sobre pagamento, vencimento, negociação ou alteração de dados? Nossa equipe está pronta para ajudar.</p></div>
-    <div style="display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:32px;">
-      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
-        <div style="width:52px;height:52px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">Telefone</h3>
-        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Atendimento direto com consultor</p>
-        <div style="font-size:18px;font-weight:900;color:var(--accent);">(11) 5444-1661</div>
-        <div style="font-size:12.5px;color:var(--muted);margin-top:4px;">24h por dia, 7 dias por semana</div>
-      </div>
-      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
-        <div style="width:52px;height:52px;border-radius:14px;background:rgba(37,211,102,.12);display:flex;align-items:center;justify-content:center;color:#16a34a;margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">WhatsApp</h3>
-        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Atendimento rápido por mensagem</p>
-        <a href="#" class="wa-action action-btn" style="font-size:18px;font-weight:900;color:#16a34a;text-decoration:none;display:inline-block;">(11) 5444-1661</a>
-        <div style="font-size:12.5px;color:var(--muted);margin-top:4px;">Resposta em até 5 minutos</div>
-      </div>
-      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
-        <div style="width:52px;height:52px;border-radius:14px;background:var(--accent2-soft);display:flex;align-items:center;justify-content:center;color:#d44a50;margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">Chat Online</h3>
-        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Converse com um consultor em tempo real</p>
-        <a href="#" class="wa-action action-btn" style="background:linear-gradient(135deg,#FA7F84,#f5656c);color:#fff;border:none;padding:8px 20px;border-radius:8px;font-weight:800;font-size:13px;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(250,127,132,.3);text-decoration:none;display:inline-block;">Iniciar Chat</a>
-        <div style="font-size:12.5px;color:var(--muted);margin-top:10px;">Tempo médio de espera: 2 min</div>
-      </div>
-      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
-        <div style="width:52px;height:52px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
-        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">E-mail</h3>
-        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Envie documentos e solicitações</p>
-        <a href="#" class="wa-action action-btn" style="font-size:13.5px;font-weight:800;color:var(--accent);text-decoration:none;">financeiro@hapvida.com.br</a>
-        <div style="font-size:12.5px;color:var(--muted);margin-top:4px;">Resposta em até 1 dia útil</div>
+    <div style="max-width:420px;margin:0 auto 32px;">
+      <div class="reveal card-hover" style="border:1.5px solid rgba(37,211,102,.3);border-radius:20px;padding:36px 28px;text-align:center;background:linear-gradient(180deg,#fff 0%,#f0fdf4 100%);box-shadow:0 8px 30px rgba(37,211,102,.15);">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(37,211,102,.15);display:flex;align-items:center;justify-content:center;color:#16a34a;margin:0 auto 18px;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <h3 style="font-size:20px;font-weight:900;margin:0 0 8px;color:var(--text);">Fale pelo WhatsApp</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0 0 16px;line-height:1.6;">Atendimento rápido por mensagem com nossa equipe de suporte. Resposta em até 5 minutos.</p>
+        <a href="#" class="wa-action action-btn" style="display:inline-flex;align-items:center;gap:10px;background:#16a34a;color:#fff;padding:14px 32px;border-radius:12px;font-weight:900;font-size:16px;text-decoration:none;box-shadow:0 6px 20px rgba(37,211,102,.4);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          (11) 5444-1661
+        </a>
+        <div style="font-size:12.5px;color:var(--muted);margin-top:14px;display:flex;align-items:center;justify-content:center;gap:6px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#16a34a;display:inline-block;animation:pulse 1.5s infinite;"></span>
+          Online agora · Atendimento 24h
+        </div>
       </div>
     </div>
     <div class="reveal" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(4,53,172,.18);">
@@ -296,7 +275,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text)}
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,.1);padding:18px 0;">
-      <div class="max-w-6xl mx-auto px-6 text-center" style="font-size:12px;color:#7a8cc4;">© 2026 Hapvida NotreDame Intermédica · CNPJ XX.XXX.XXX/XXXX-XX · Todos os direitos reservados</div>
+      <div class="max-w-6xl mx-auto px-6 text-center" style="font-size:12px;color:#7a8cc4;">© 2026 Hapvida NotreDame Intermédica · Todos os direitos reservados</div>
     </div>
   </footer>
 
@@ -332,11 +311,17 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text)}
   if(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      var mes = document.getElementById('mesRef').value || 'Outubro/2026';
-      var ref = document.getElementById('refMes');
-      if(ref) ref.textContent = mes;
-      var panel = document.getElementById('resultPanel');
-      if(panel){ panel.style.display = 'block'; panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+      var cpf = document.getElementById('cpf').value || '';
+      var mat = document.getElementById('matricula').value || '';
+      var nasc = document.getElementById('nascimento').value || '';
+      var mes = document.getElementById('mesRef').value || '';
+      var msg = 'Olá! Quero emitir a 2ª via da minha fatura Hapvida.%0A%0A' +
+                '*Dados informados:*%0A' +
+                '• CPF: ' + encodeURIComponent(cpf) + '%0A' +
+                '• Carteirinha/Matrícula: ' + encodeURIComponent(mat) + '%0A' +
+                '• Data de Nascimento: ' + encodeURIComponent(nasc) + '%0A' +
+                '• Mês de Referência: ' + encodeURIComponent(mes);
+      window.open('https://wa.me/551154441661?text=' + msg, '_blank');
     });
   }
 })();
