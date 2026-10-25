@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hapvida - 2ª Via de Fatura e Suporte de Pagamento</title>
+<meta name="description" content="Emita a segunda via da sua fatura Hapvida, pague via Pix e tire dúvidas com nosso suporte 24h. Rápido, seguro e sem burocracia.">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--bg:#f5f8ff;--card:#ffffff;--text:#0a1a4a;--muted:#5a6a9a;--accent:#0435AC;--accent-soft:rgba(4,53,172,.10);--accent2:#FA7F84;--accent2-soft:rgba(250,127,132,.16);--dark:#051C65;--lightblue:#c5dbf2;--border:rgba(4,53,172,.12);--wa:#25D366}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text)}
+.reveal{opacity:0;transform:translateY(18px);animation:fadeUp .6s ease forwards}
+.reveal:nth-child(2){animation-delay:.1s}.reveal:nth-child(3){animation-delay:.2s}.reveal:nth-child(4){animation-delay:.3s}.reveal:nth-child(5){animation-delay:.4s}.reveal:nth-child(6){animation-delay:.5s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+.card-hover{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card-hover:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(4,53,172,.14);border-color:var(--accent)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-weight:700;color:var(--text);transition:color .2s;font-size:15px}
+.faq-q:hover{color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted);line-height:1.7;font-size:14px}
+.faq-item.open .faq-a{max-height:220px;padding-bottom:18px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-icon{transition:transform .3s ease;font-size:22px;color:var(--accent);font-weight:400;flex-shrink:0;margin-left:12px}
+.input-field{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none}
+.input-field:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.input-label{font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;display:block}
+.btn-primary{width:100%;padding:14px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0a4bd6);color:#fff;font-weight:800;font-size:15px;border:none;cursor:pointer;transition:transform .15s,box-shadow .2s;font-family:inherit;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(4,53,172,.35)}
+.btn-pink{background:linear-gradient(135deg,#FA7F84,#f5656c);box-shadow:0 8px 20px rgba(250,127,132,.4)}
+.btn-pink:hover{box-shadow:0 10px 26px rgba(250,127,132,.5)}
+.nav-link{color:#fff;font-weight:700;font-size:14px;text-decoration:none;transition:color .2s;padding:6px 2px;border-bottom:2px solid transparent}
+.nav-link:hover{color:#FFD23F;border-bottom-color:#FFD23F}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;flex-shrink:0}
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:1000}
+.wa-btn{width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:transform .2s;cursor:pointer;text-decoration:none}
+.wa-btn:hover{transform:scale(1.08)}
+.barcode{font-family:monospace;letter-spacing:2px;font-size:13px;word-break:break-all;background:#f0f4ff;padding:12px;border-radius:8px;border:1px dashed var(--accent)}
+.benefit-check{width:22px;height:22px;border-radius:50%;background:var(--accent-soft);display:inline-flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0}
+.img-frame{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(4,53,172,.2);border:4px solid #fff}
+.tag-pink{display:inline-flex;align-items:center;gap:6px;background:var(--accent2-soft);color:#d44a50;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:800;letter-spacing:.03em}
+.action-btn{cursor:pointer;transition:transform .15s,box-shadow .2s}
+.action-btn:hover{transform:translateY(-1px)}
+.service-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.logo-img{height:42px;width:auto;display:block}
+.promo-bar{background:#0a2a7a;color:#fff;font-size:14px;font-weight:700;padding:10px 0;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px}
+</style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div style="background:var(--dark);color:#cdd8ff;font-size:12.5px;padding:8px 0;">
+    <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6">
+      <span style="display:flex;align-items:center;gap:6px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (11) 5444-1661 · Atendimento 24h por dia, 7 dias por semana
+      </span>
+    </div>
+  </div>
+
+  <!-- HEADER AZUL -->
+  <header style="background:var(--accent);position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(4,53,172,.3);">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between flex-wrap gap-4">
+      <img src="https://p16-flow-file-sign.ibyteimg.com/tos-mya-i-u8dpqn1f20/rc/pc/super_tool/393afaffdc4a4aa9b2757aac0094479b.png?rcl=20261026002650FEEE8BC39E4951CE3678&rk3s=8e244e95&rrcfp=f512b60b&x-expires=1793550500&x-signature=5QTWeqDY26liQBTKKS%2B0ZbVRHJo%3D" alt="Hapvida" class="logo-img" onerror="this.style.display='none'">
+      <nav style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#segunda-via" class="nav-link">2ª Via de Fatura</a>
+        <a href="#suporte" class="nav-link">Suporte</a>
+        <a href="#duvidas" class="nav-link">Dúvidas</a>
+        <a href="#segunda-via" style="background:linear-gradient(135deg,#FA7F84,#f5656c);color:#fff;padding:10px 22px;border-radius:8px;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 4px 14px rgba(250,127,132,.35);transition:transform .15s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Emitir Fatura</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PROMO BAR -->
+  <div class="promo-bar">
+    <span style="background:#FFD23F;color:#0435AC;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:900;">75% OFF</span>
+    na 1ª mensalidade para novos planos · Vagas limitadas
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio" style="background:linear-gradient(150deg,#0435AC 0%,#0a4bd6 50%,#1a5fe8 100%);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-100px;right:-80px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.06);"></div>
+    <div style="position:absolute;bottom:-120px;left:-60px;width:320px;height:320px;border-radius:50%;background:rgba(250,127,132,.15);"></div>
+    <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center;position:relative;z-index:2;">
+      <div class="reveal" style="color:#fff;">
+        <span class="tag-pink" style="margin-bottom:20px;"><span style="width:7px;height:7px;border-radius:50%;background:#d44a50;display:inline-block;"></span>Plataforma Oficial · Ambiente Seguro</span>
+        <h1 style="font-size:42px;font-weight:900;line-height:1.1;letter-spacing:-.02em;margin:0 0 16px;">Segunda via de fatura<br>e suporte de pagamento<br><span style="background:linear-gradient(90deg,#FFD23F,#FA7F84);-webkit-background-clip:text;background-clip:text;color:transparent;">na palma da sua mão</span></h1>
+        <p style="font-size:16px;line-height:1.7;color:#cdd8ff;max-width:460px;margin:0 0 28px;">Emita a segunda via do seu boleto, acompanhe pagamentos e tire dúvidas financeiras com a nossa equipe de suporte especializado. Rápido, seguro e sem precisar esperar na linha.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+          <div style="display:flex;align-items:center;gap:10px;"><span class="benefit-check" style="background:rgba(255,255,255,.15);color:#fff;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span style="font-size:14px;font-weight:700;color:#e6ecff;">Emissão imediata, sem burocracia</span></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span class="benefit-check" style="background:rgba(255,255,255,.15);color:#fff;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span style="font-size:14px;font-weight:700;color:#e6ecff;">Pagamento via Pix ou boleto impresso</span></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span class="benefit-check" style="background:rgba(255,255,255,.15);color:#fff;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span style="font-size:14px;font-weight:700;color:#e6ecff;">Suporte humano 24h por telefone e WhatsApp</span></div>
+        </div>
+        <div style="display:flex;gap:28px;flex-wrap:wrap;">
+          <div><div style="font-size:26px;font-weight:900;color:#fff;line-height:1;">+15,9 mi</div><div style="font-size:11.5px;color:#a8b8e8;font-weight:700;margin-top:3px;">beneficiários</div></div>
+          <div><div style="font-size:26px;font-weight:900;color:#fff;line-height:1;">80 anos</div><div style="font-size:11.5px;color:#a8b8e8;font-weight:700;margin-top:3px;">de história</div></div>
+          <div><div style="font-size:26px;font-weight:900;color:#fff;line-height:1;">+800</div><div style="font-size:11.5px;color:#a8b8e8;font-weight:700;margin-top:3px;">unidades próprias</div></div>
+        </div>
+      </div>
+      <div class="reveal" style="position:relative;">
+        <div class="img-frame">
+          <img src="https://p16-flow-image-sign.ibyteimg.com/tos-mya-i-3rsxbfecgb/rc_gen_image/511d4fd4ffe54500a1a04253697eb3e5.jpeg~tplv-0es2k971ck-image.image?rcl=20261025230218659A3D65380AEE5CB456&rk3s=8e244e95&rrcfp=02a80fc2&x-expires=1795532660&x-signature=EQ9sS%2BOsdR4ShHkZETGYB07rM0Y%3D" alt="Atendimento Hapvida" style="width:100%;height:400px;object-fit:cover;display:block;" onerror="this.style.display='none'">
+        </div>
+        <div style="position:absolute;top:-14px;right:-14px;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px rgba(0,0,0,.18);display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:var(--accent2-soft);display:flex;align-items:center;justify-content:center;color:#d44a50;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div style="font-size:13px;font-weight:900;color:var(--text);line-height:1;">100% seguro</div><div style="font-size:10.5px;color:var(--muted);font-weight:700;">criptografia SSL</div></div>
+        </div>
+        <div style="position:absolute;bottom:-18px;left:-18px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 12px 30px rgba(0,0,0,.18);display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+          <div><div style="font-size:18px;font-weight:900;color:var(--text);line-height:1;">2ª via</div><div style="font-size:11px;color:var(--muted);font-weight:700;">em menos de 1 minuto</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE ICONS STRIP -->
+  <section style="background:#fff;border-bottom:1px solid var(--border);">
+    <div class="max-w-6xl mx-auto px-6 py-10" style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+      <div class="reveal" style="text-align:center;"><div class="service-icon" style="background:var(--accent-soft);color:var(--accent);margin:0 auto 10px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><strong style="font-size:14px;color:var(--text);">2ª Via de Boleto</strong></div>
+      <div class="reveal" style="text-align:center;"><div class="service-icon" style="background:rgba(37,211,102,.12);color:#16a34a;margin:0 auto 10px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><strong style="font-size:14px;color:var(--text);">Pagamento por Pix</strong></div>
+      <div class="reveal" style="text-align:center;"><div class="service-icon" style="background:var(--accent2-soft);color:#d44a50;margin:0 auto 10px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><strong style="font-size:14px;color:var(--text);">Suporte por WhatsApp</strong></div>
+      <div class="reveal" style="text-align:center;"><div class="service-icon" style="background:var(--accent-soft);color:var(--accent);margin:0 auto 10px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><strong style="font-size:14px;color:var(--text);">Ambiente Seguro</strong></div>
+      <div class="reveal" style="text-align:center;"><div class="service-icon" style="background:rgba(37,211,102,.12);color:#16a34a;margin:0 auto 10px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><strong style="font-size:14px;color:var(--text);">Atendimento 24h</strong></div>
+    </div>
+  </section>
+
+  <!-- 2ª VIA FORM -->
+  <section id="segunda-via" class="max-w-6xl mx-auto px-6" style="margin-top:40px;">
+    <div class="reveal" style="background:var(--card);border-radius:20px;box-shadow:0 20px 50px rgba(4,53,172,.15);border:1px solid var(--border);overflow:hidden;">
+      <div style="background:linear-gradient(90deg,var(--accent),#0a4bd6);padding:18px 28px;display:flex;align-items:center;gap:12px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <div><h2 style="color:#fff;font-size:18px;font-weight:800;margin:0;">Segunda Via de Fatura</h2><p style="color:#cdd8ff;font-size:12.5px;margin:2px 0 0;">Preencha os dados abaixo para localizar e emitir seu boleto</p></div>
+      </div>
+      <div class="p-7">
+        <form id="faturaForm" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+          <div><label class="input-label">CPF do Titular</label><input type="text" id="cpf" class="input-field" placeholder="000.000.000-00" maxlength="14" required></div>
+          <div><label class="input-label">Nº da Carteirinha / Matrícula</label><input type="text" id="matricula" class="input-field" placeholder="000000000-0" required></div>
+          <div><label class="input-label">Data de Nascimento</label><input type="date" id="nascimento" class="input-field" required></div>
+          <div><label class="input-label">Mês de Referência</label><select id="mesRef" class="input-field" required><option value="">Selecione o mês</option><option>Outubro/2026</option><option>Setembro/2026</option><option>Agosto/2026</option><option>Julho/2026</option><option>Junho/2026</option><option>Maio/2026</option></select></div>
+          <div style="grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-top:-4px;"><input type="checkbox" id="termo" required style="width:16px;height:16px;accent-color:var(--accent);"><label for="termo" style="font-size:12.5px;color:var(--muted);">Declaro ser o titular ou responsável autorizado e concordo com a <a href="#" class="wa-action" style="color:var(--accent);font-weight:700;">Política de Privacidade</a>.</label></div>
+          <div style="grid-column:1/-1;"><button type="submit" class="btn-primary btn-pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Buscar e Emitir 2ª Via</button></div>
+        </form>
+        <div id="resultPanel" style="display:none;margin-top:24px;padding:22px;border-radius:14px;background:#f0f7ff;border:1.5px solid var(--accent);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#16a34a;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <div><h3 style="margin:0;font-size:16px;font-weight:800;color:var(--text);">Fatura localizada com sucesso</h3><p style="margin:2px 0 0;font-size:12.5px;color:var(--muted);">Referência: <span id="refMes">Outubro/2026</span></p></div>
+          </div>
+          <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:16px;">
+            <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border);"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Valor</div><div style="font-size:22px;font-weight:900;color:var(--accent);margin-top:4px;">R$ 487,90</div></div>
+            <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border);"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Vencimento</div><div style="font-size:22px;font-weight:900;color:var(--text);margin-top:4px;">10/11/2026</div></div>
+            <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border);"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Status</div><div style="margin-top:8px;"><span style="background:#fef3c7;color:#92400e;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:800;">Pendente</span></div></div>
+          </div>
+          <div style="margin-bottom:16px;"><div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Linha Digitável</div><div class="barcode">00190.50095 40144.841609 95683.110025 5 88880000048790</div></div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#" class="wa-action action-btn" style="flex:1;min-width:160px;padding:12px;border-radius:10px;background:var(--accent);color:#fff;font-weight:800;font-size:14px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Baixar PDF do Boleto</a>
+            <a href="#" class="wa-action action-btn" style="flex:1;min-width:160px;padding:12px;border-radius:10px;background:#fff;color:var(--accent);font-weight:800;font-size:14px;border:1.5px solid var(--accent);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>Pagar com Pix</a>
+            <button onclick="document.getElementById('resultPanel').style.display='none';document.getElementById('faturaForm').reset();" style="padding:12px 18px;border-radius:10px;background:transparent;color:var(--muted);font-weight:700;font-size:14px;border:1.5px solid var(--border);cursor:pointer;font-family:inherit;">Nova busca</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="reveal text-center mb-10"><p style="font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin:0 0 8px;">Como funciona</p><h2 style="font-size:30px;font-weight:900;margin:0;color:var(--text);letter-spacing:-.02em;">Três passos para emitir sua fatura</h2></div>
+    <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+      <div class="reveal card-hover" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;"><div class="step-num" style="margin-bottom:16px;">1</div><h3 style="font-size:17px;font-weight:800;margin:0 0 8px;color:var(--text);">Informe seus dados</h3><p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0;">CPF, número da carteirinha e data de nascimento. Seus dados são protegidos por criptografia de ponta a ponta.</p></div>
+      <div class="reveal card-hover" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;"><div class="step-num" style="margin-bottom:16px;background:var(--accent2-soft);color:#d44a50;">2</div><h3 style="font-size:17px;font-weight:800;margin:0 0 8px;color:var(--text);">Localize a fatura</h3><p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0;">Selecione o mês de referência e visualize valor, vencimento e linha digitável em segundos.</p></div>
+      <div class="reveal card-hover" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;"><div class="step-num" style="margin-bottom:16px;">3</div><h3 style="font-size:17px;font-weight:800;margin:0 0 8px;color:var(--text);">Baixe e pague</h3><p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0;">Baixe o PDF do boleto ou pague direto pelo Pix. Pronto, sem filas e sem esperar por e-mail.</p></div>
+    </div>
+  </section>
+
+  <!-- FAMILY / BENEFITS -->
+  <section style="background:linear-gradient(180deg,#fff 0%,#eef3fb 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="max-w-6xl mx-auto px-6 py-16 grid gap-12" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center;">
+      <div class="reveal"><div class="img-frame" style="box-shadow:0 20px 50px rgba(4,53,172,.18);"><img src="https://p16-flow-image-sign.ibyteimg.com/tos-mya-i-3rsxbfecgb/rc_gen_image/1a59a8e9a0bc4310bd3567fedbff20bb.jpeg~tplv-0es2k971ck-image.image?rcl=2026102523391924A1627F5D6E0944A41F&rk3s=8e244e95&rrcfp=02a80fc2&x-expires=1795534786&x-signature=mqdrl4%2BhFfTSCQKRUevd%2BZX1dkE%3D" alt="Família Hapvida" style="width:100%;height:380px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div></div>
+      <div class="reveal">
+        <p style="font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;">Por que a Hapvida</p>
+        <h2 style="font-size:30px;font-weight:900;margin:0 0 16px;color:var(--text);letter-spacing:-.02em;line-height:1.2;">80 anos cuidando de quem você ama</h2>
+        <p style="font-size:15px;color:var(--muted);line-height:1.7;margin:0 0 24px;">Somos a maior operadora de saúde da América Latina, com rede credenciada própria integrada e mais de 15,9 milhões de beneficiários. Aqui, sua fatura e seu atendimento financeiro são tratados com a mesma seriedade do seu plano de saúde.</p>
+        <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><strong style="font-size:14px;color:var(--text);">Rede própria integrada</strong><p style="font-size:13px;color:var(--muted);margin:2px 0 0;">+800 unidades pelo Brasil</p></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><strong style="font-size:14px;color:var(--text);">Telemedicina 24h</strong><p style="font-size:13px;color:var(--muted);margin:2px 0 0;">Consulta por vídeo quando precisar</p></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><strong style="font-size:14px;color:var(--text);">Transparência total</strong><p style="font-size:13px;color:var(--muted);margin:2px 0 0;">Sem reajustes abusivos</p></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><strong style="font-size:14px;color:var(--text);">Suporte humano</strong><p style="font-size:13px;color:var(--muted);margin:2px 0 0;">Atendimento real, não robô</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT CHANNELS -->
+  <section id="suporte" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="reveal text-center mb-10"><p style="font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin:0 0 8px;">Central de Suporte</p><h2 style="font-size:30px;font-weight:900;margin:0;color:var(--text);letter-spacing:-.02em;">Fale com a gente do seu jeito</h2><p style="font-size:15px;color:var(--muted);max-width:520px;margin:12px auto 0;">Dúvidas sobre pagamento, vencimento, negociação ou alteração de dados? Nossa equipe está pronta para ajudar.</p></div>
+    <div style="display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:32px;">
+      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
+        <div style="width:52px;height:52px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">Telefone</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Atendimento direto com consultor</p>
+        <div style="font-size:18px;font-weight:900;color:var(--accent);">(11) 5444-1661</div>
+        <div style="font-size:12.5px;color:var(--muted);margin-top:4px;">24h por dia, 7 dias por semana</div>
+      </div>
+      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
+        <div style="width:52px;height:52px;border-radius:14px;background:rgba(37,211,102,.12);display:flex;align-items:center;justify-content:center;color:#16a34a;margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">WhatsApp</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Atendimento rápido por mensagem</p>
+        <a href="#" class="wa-action action-btn" style="font-size:18px;font-weight:900;color:#16a34a;text-decoration:none;display:inline-block;">(11) 5444-1661</a>
+        <div style="font-size:12.5px;color:var(--muted);margin-top:4px;">Resposta em até 5 minutos</div>
+      </div>
+      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
+        <div style="width:52px;height:52px;border-radius:14px;background:var(--accent2-soft);display:flex;align-items:center;justify-content:center;color:#d44a50;margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">Chat Online</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Converse com um consultor em tempo real</p>
+        <a href="#" class="wa-action action-btn" style="background:linear-gradient(135deg,#FA7F84,#f5656c);color:#fff;border:none;padding:8px 20px;border-radius:8px;font-weight:800;font-size:13px;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(250,127,132,.3);text-decoration:none;display:inline-block;">Iniciar Chat</a>
+        <div style="font-size:12.5px;color:var(--muted);margin-top:10px;">Tempo médio de espera: 2 min</div>
+      </div>
+      <div class="reveal card-hover" style="border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;background:var(--card);">
+        <div style="width:52px;height:52px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);margin:0 auto 14px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <h3 style="font-size:16px;font-weight:800;margin:0 0 6px;color:var(--text);">E-mail</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0 0 10px;line-height:1.5;">Envie documentos e solicitações</p>
+        <a href="#" class="wa-action action-btn" style="font-size:13.5px;font-weight:800;color:var(--accent);text-decoration:none;">financeiro@hapvida.com.br</a>
+        <div style="font-size:12.5px;color:var(--muted);margin-top:4px;">Resposta em até 1 dia útil</div>
+      </div>
+    </div>
+    <div class="reveal" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(4,53,172,.18);">
+      <img src="https://p16-flow-image-sign.ibyteimg.com/tos-mya-i-3rsxbfecgb/rc_gen_image/c377ffa841184b08835501a999717f80.jpeg~tplv-0es2k971ck-image.image?rcl=2026102523391924A1627F5D6E0944A41F&rk3s=8e244e95&rrcfp=02a80fc2&x-expires=1795534787&x-signature=WoTzbyA24NC%2BVcDhQmu8fey8d80%3D" alt="Equipe de suporte Hapvida" style="width:100%;height:280px;object-fit:cover;display:block;" onerror="this.style.display='none'">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,53,172,.85) 0%,rgba(4,53,172,.4) 60%,transparent 100%);display:flex;align-items:center;padding:0 40px;">
+        <div style="max-width:440px;color:#fff;">
+          <h3 style="font-size:24px;font-weight:900;margin:0 0 8px;letter-spacing:-.01em;">Nossa equipe está sempre pronta para você</h3>
+          <p style="font-size:14px;color:#cdd8ff;margin:0 0 16px;line-height:1.6;">Mais de 2.500 consultores treinados para resolver suas dúvidas financeiras com agilidade e empatia.</p>
+          <a href="#" class="wa-action action-btn" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--accent);padding:10px 22px;border-radius:8px;font-weight:800;font-size:14px;text-decoration:none;">Falar com suporte <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="duvidas" style="background:#fff;border-top:1px solid var(--border);">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+      <div class="reveal text-center mb-10"><p style="font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;">Perguntas Frequentes</p><h2 style="font-size:30px;font-weight:900;margin:0;color:var(--text);letter-spacing:-.02em;">Dúvidas sobre fatura e pagamento</h2></div>
+      <div class="reveal" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:8px 26px;">
+        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Como emitir a segunda via do meu boleto?<span class="faq-icon">+</span></div><div class="faq-a">Basta preencher o formulário acima com CPF, número da carteirinha, data de nascimento e mês de referência. A fatura será localizada imediatamente e você poderá baixar o PDF ou pagar via Pix.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Meu boleto venceu, o que fazer?<span class="faq-icon">+</span></div><div class="faq-a">Boletos vencidos podem ser emitidos com acréscimo de juros e multa proporcional. Utilize o formulário de segunda via selecionando o mês desejado — o valor atualizado será exibido automaticamente. Para negociação de débitos, entre em contato pelo telefone ou WhatsApp.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Como alterar o e-mail de recebimento da fatura?<span class="faq-icon">+</span></div><div class="faq-a">Atualize seu e-mail de contato diretamente pelo WhatsApp ou telefone (11) 5444-1661. A partir do próximo ciclo, a fatura será enviada para o novo endereço.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Não encontrei minha fatura, e agora?<span class="faq-icon">+</span></div><div class="faq-a">Verifique se o CPF e o número da carteirinha estão corretos. Se o problema persistir, entre em contato com o suporte pelo WhatsApp ou telefone (11) 5444-1661 para resolver rapidamente.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Posso parcelar o valor da minha fatura?<span class="faq-icon">+</span></div><div class="faq-a">Sim. Para valores em atraso, oferecemos condições especiais de parcelamento com entrada reduzida. Negocie diretamente pelo telefone (11) 5444-1661 ou pelo WhatsApp com um de nossos consultores financeiros.</div></div>
+        <div class="faq-item" style="border-bottom:none;"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Qual o horário de atendimento do suporte financeiro?<span class="faq-icon">+</span></div><div class="faq-a">A central de atendimento funciona 24 horas por dia, 7 dias por semana, incluindo feriados. Ligue (11) 5444-1661 ou chame no WhatsApp.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="reveal" style="background:linear-gradient(135deg,var(--dark),var(--accent));border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:-60px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(250,127,132,.25);"></div>
+      <div style="position:relative;z-index:2;max-width:520px;">
+        <span class="tag-pink" style="margin-bottom:12px;">Dica</span>
+        <h3 style="color:#fff;font-size:24px;font-weight:900;margin:0 0 8px;letter-spacing:-.01em;">Receba suas faturas por e-mail e nunca mais perca um vencimento</h3>
+        <p style="color:#cdd8ff;font-size:14.5px;margin:0;line-height:1.6;">Cadastre seu e-mail de contato pelo WhatsApp e receba a fatura todo mês com antecedência.</p>
+      </div>
+      <a href="#" class="wa-action action-btn" style="position:relative;z-index:2;background:linear-gradient(135deg,#FA7F84,#f5656c);color:#fff;padding:14px 30px;border-radius:10px;font-weight:900;font-size:15px;text-decoration:none;box-shadow:0 8px 24px rgba(250,127,132,.4);">Cadastrar E-mail</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark);color:#a8b8e8;">
+    <div class="max-w-6xl mx-auto px-6 py-12" style="display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+      <div>
+        <div style="margin-bottom:14px;"><img src="https://p16-flow-file-sign.ibyteimg.com/tos-mya-i-u8dpqn1f20/rc/pc/super_tool/393afaffdc4a4aa9b2757aac0094479b.png?rcl=20261026002650FEEE8BC39E4951CE3678&rk3s=8e244e95&rrcfp=f512b60b&x-expires=1793550500&x-signature=5QTWeqDY26liQBTKKS%2B0ZbVRHJo%3D" alt="Hapvida" style="height:36px;width:auto;display:block;" onerror="this.style.display='none'"></div>
+        <p style="font-size:13px;line-height:1.7;margin:0 0 8px;">Maior operadora de saúde da América Latina. Mais de 15,9 milhões de beneficiários e 80 anos de história.</p>
+        <p style="font-size:12px;font-style:italic;color:#c5dbf2;margin:0;">Sinal que a sua vida pede Hapvida</p>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:14px;font-weight:800;margin:0 0 14px;text-transform:uppercase;letter-spacing:.08em;">Acesso Rápido</h4>
+        <ul style="list-style:none;padding:0;margin:0;font-size:13.5px;line-height:2.1;">
+          <li><a href="#segunda-via" style="color:#a8b8e8;text-decoration:none;">2ª Via de Fatura</a></li>
+          <li><a href="#suporte" style="color:#a8b8e8;text-decoration:none;">Central de Suporte</a></li>
+          <li><a href="#duvidas" style="color:#a8b8e8;text-decoration:none;">Perguntas Frequentes</a></li>
+          <li><a href="#inicio" style="color:#a8b8e8;text-decoration:none;">Voltar ao início</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:14px;font-weight:800;margin:0 0 14px;text-transform:uppercase;letter-spacing:.08em;">Contato</h4>
+        <ul style="list-style:none;padding:0;margin:0;font-size:13.5px;line-height:2.1;">
+          <li>Telefone: (11) 5444-1661</li>
+          <li><a href="#" class="wa-action" style="color:#a8b8e8;text-decoration:none;">WhatsApp: (11) 5444-1661</a></li>
+          <li>Atendimento 24h · 7 dias por semana</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:14px;font-weight:800;margin:0 0 14px;text-transform:uppercase;letter-spacing:.08em;">Segurança</h4>
+        <p style="font-size:12.5px;line-height:1.7;margin:0;">Ambiente 100% criptografado (SSL). Nunca solicitamos senhas por e-mail ou WhatsApp. Em caso de dúvida, ligue para os canais oficiais.</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.1);padding:18px 0;">
+      <div class="max-w-6xl mx-auto px-6 text-center" style="font-size:12px;color:#7a8cc4;">© 2026 Hapvida NotreDame Intermédica · CNPJ XX.XXX.XXX/XXXX-XX · Todos os direitos reservados</div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <div class="wa-float">
+    <a href="#" class="wa-btn wa-action" title="Falar no WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+<script>
+(function(){
+  var WA_NUM = '551154441661';
+  var WA_MSG = encodeURIComponent('Olá! Vim pelo site de suporte Hapvida e preciso de ajuda.');
+  var WA_URL = 'https://wa.me/' + WA_NUM + '?text=' + WA_MSG;
+  var links = document.querySelectorAll('.wa-action');
+  for(var i=0; i<links.length; i++){
+    links[i].setAttribute('href', WA_URL);
+    links[i].setAttribute('target', '_blank');
+    links[i].setAttribute('rel', 'noopener');
+  }
+  var cpf = document.getElementById('cpf');
+  if(cpf){
+    cpf.addEventListener('input', function(){
+      var v = this.value.replace(/\D/g,'').slice(0,11);
+      v = v.replace(/(\d{3})(\d)/,'$1.$2');
+      v = v.replace(/(\d{3})(\d)/,'$1.$2');
+      v = v.replace(/(\d{3})(\d{1,2})$/,'$1-$2');
+      this.value = v;
+    });
+  }
+  var form = document.getElementById('faturaForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var mes = document.getElementById('mesRef').value || 'Outubro/2026';
+      var ref = document.getElementById('refMes');
+      if(ref) ref.textContent = mes;
+      var panel = document.getElementById('resultPanel');
+      if(panel){ panel.style.display = 'block'; panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+    });
+  }
+})();
+</script>
+</body>
+</html>
